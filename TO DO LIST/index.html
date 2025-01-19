@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Authentication Section -->
+  <div class="auth-container">
+    <h1>To-Do List</h1>
+    <div id="auth-section">
+      <input type="email" id="email" placeholder="Enter Email" />
+      <input type="password" id="password" placeholder="Enter Password" />
+      <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+      <p id="auth-message"></p>
+    </div>
+  </div>
+
+  <!-- Task Management Section (Visible after Login) -->
+  <div id="task-section" class="task-container">
+    <button id="logout-btn">Logout</button>
+
+    <h2>Your Tasks</h2>
+
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Task Title" required />
+      <textarea id="task-desc" placeholder="Task Description"></textarea>
+      <select id="task-category">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+      </select>
+      <select id="task-priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <input type="date" id="task-due-date" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="tasks-list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
